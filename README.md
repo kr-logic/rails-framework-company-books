@@ -1,1 +1,5 @@
-# rails-framework-company-books
+## Ruby on Rails Framework project: Book Company database website
+
+I made this repository for a university course in order to practice making simple and quick websites for prototypes to spare time compared to making in PHP and HTML from scratch. 
+
+This project is a book database CRUD system built with Ruby on Rails, featuring Devise authentication and custom data validations so far.
