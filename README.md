@@ -1,4 +1,4 @@
-## Ruby on Rails Framework project: Book Company database website
+## Ruby on Rails Framework project: Book database website
 
 <img src="https://github.com/user-attachments/assets/f8972c22-7143-42c6-bfb9-1ca5ca0e19a0" />
 
