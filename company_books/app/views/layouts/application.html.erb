@@ -27,5 +27,21 @@
     <p style="color: green; font-weight: bold;"><%= notice %></p>
     <p style="color: red; font-weight: bold;"><%= alert %></p>
     <%= yield %>
+
+    <nav style="position: absolute; top: 20px; right: 30px;">
+      <% if user_signed_in? %>
+        <%= form_with url: destroy_user_session_path, method: :delete, local: true do |f| %>
+          <div style="margin-bottom: 15px;">
+            <span>Logged in as: <b><%= current_user.email %></b></span>
+          </div>
+          <%= f.submit "LOG OUT", class: "btn" %>
+        <% end %>
+      <% else %>
+        <div style="background: gray; padding: 20px; border: 2px solid #000; box-shadow: 6px 6px 0px #000; width: 200px; font-family: Consolas;">
+          <%= link_to "LOG IN", new_user_session_path, class: "btn", style: "margin-bottom: 10px;" %><br>
+          <%= link_to "REGISTER", new_user_registration_path, class: "btn" %>
+        </div>
+      <% end %>
+    </nav>
   </body>
 </html>

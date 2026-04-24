@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<h1 style="text-align: center;">Book controls</h1>
 
-<%= render @book %>
+<div class="book-card">
+  <%= render @book %>
+</div>
 
-<div>
-  <%= link_to "Edit this book", edit_book_path(@book) %> |
-  <%= link_to "Back to books", books_path %>
+<div style="text-align: center;">
+  <%= link_to "Edit this book", edit_book_path(@book), class: "btn" %>
+  <%= link_to "Back to list of books", books_path, class: "btn" %>
 
-  <%= button_to "Destroy this book", @book, method: :delete %>
+  <br>
+  <br>
+  <%= button_to "Delete this book from the database", @book, method: :delete, form_class: "button-form", class: "btn btn-red" %>
 </div>
