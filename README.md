@@ -92,7 +92,7 @@ Authorizáció: app/controllers/books_controller.rb fájlban
 
 ## Ruby on Rails Framework project: Book database website
 
-<img src="https://github.com/user-attachments/assets/f8972c22-7143-42c6-bfb9-1ca5ca0e19a0" />
+<img src="https://github.com/user-attachments/assets/fa3d39bc-ad36-4fc3-a777-7ccc5e6a37d8" />
 
 
 
