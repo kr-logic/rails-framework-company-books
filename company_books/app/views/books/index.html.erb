@@ -2,6 +2,27 @@
 
 <h1 style="text-align: center;">Books database</h1>
 
+<!-- Search and Filter Function -->
+<div style="position: absolute; top: 20px; left: 30px;">
+  <%= form_with url: books_path, method: :get, local: true do |form| %>
+    
+    <!-- Top row: Search bar and button -->
+    <div style="margin-bottom: 10px;">
+      <%= form.text_field :query, value: params[:query], placeholder: "Search for title or author...", style: "padding: 8px; width: 280px;" %>
+      <%= form.submit "Search", class: "btn" %>
+    </div>
+    
+    <!-- Filter buttons -->
+    <div style="margin-bottom: 10px;">
+      <%= link_to "All books", books_path, class: "btn" %>
+    </div>
+    <div>
+      <%= link_to "Long books (500+ pages)", books_path(filter: 'long'), class: "btn" %>
+    </div>
+    
+  <% end %>
+</div>
+
 <div id="books">
   <% @books.each do |book| %>
     

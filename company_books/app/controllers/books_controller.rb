@@ -6,7 +6,14 @@ class BooksController < ApplicationController
 
   # GET /books or /books.json
   def index
-    @books = Book.all
+    # If the URL has ?filter=long
+    if params[:filter] == 'long'
+      @books = Book.long_books
+    
+    # Else run the search function
+    else
+      @books = Book.search(params[:query])
+    end
   end
 
   # GET /books/1 or /books/1.json
